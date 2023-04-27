@@ -10,12 +10,12 @@ import javax.swing.JOptionPane;
  *
  * @author Usuario
  */
-public class VistaBuscarCliente extends javax.swing.JInternalFrame {
+public class VistaBorrarCliente extends javax.swing.JInternalFrame {
 
     /**
-     * Creates new form VistaBuscarCliente
+     * Creates new form VistaBorrarCliente
      */
-    public VistaBuscarCliente() {
+    public VistaBorrarCliente() {
         initComponents();
     }
 
@@ -28,30 +28,23 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLBuscarCliente = new javax.swing.JLabel();
-        jLTelefonp = new javax.swing.JLabel();
-        jTTelefono = new javax.swing.JTextField();
-        jLDNI = new javax.swing.JLabel();
-        jTDNI = new javax.swing.JTextField();
         jLApellido = new javax.swing.JLabel();
         jTApellido = new javax.swing.JTextField();
         jLNombre = new javax.swing.JLabel();
         jTNombre = new javax.swing.JTextField();
         jLCiudad = new javax.swing.JLabel();
         jTCiudad = new javax.swing.JTextField();
+        jLBorrarCliente = new javax.swing.JLabel();
         jBBuscar = new javax.swing.JButton();
+        jLTelefonp = new javax.swing.JLabel();
         jBSalir = new javax.swing.JButton();
+        jTTelefono = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
+        jLDNI = new javax.swing.JLabel();
+        jTDNI = new javax.swing.JTextField();
+        jBBorrar = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(489, 360));
-
-        jLBuscarCliente.setText("BUSCAR CLIENTE");
-
-        jLTelefonp.setText("TELEFONO:");
-
-        jLDNI.setText("DNI:");
-
-        jTDNI.setEditable(false);
 
         jLApellido.setText("APELLIDO:");
 
@@ -65,6 +58,8 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
 
         jTCiudad.setEditable(false);
 
+        jLBorrarCliente.setText("BORRAR CLIENTE");
+
         jBBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BUSCAR.png"))); // NOI18N
         jBBuscar.setToolTipText("Buscar");
         jBBuscar.addActionListener(new java.awt.event.ActionListener() {
@@ -73,10 +68,23 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
             }
         });
 
+        jLTelefonp.setText("TELEFONO:");
+
         jBSalir.setText("Salir");
         jBSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBSalirActionPerformed(evt);
+            }
+        });
+
+        jLDNI.setText("DNI:");
+
+        jTDNI.setEditable(false);
+
+        jBBorrar.setText("Borrar");
+        jBBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBBorrarActionPerformed(evt);
             }
         });
 
@@ -86,13 +94,15 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jBBorrar)
+                .addGap(124, 124, 124)
                 .addComponent(jBSalir)
                 .addGap(36, 36, 36))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(186, 186, 186)
-                        .addComponent(jLBuscarCliente))
+                        .addComponent(jLBorrarCliente))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -118,14 +128,14 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
                                 .addComponent(jTTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(26, 26, 26)
                         .addComponent(jBBuscar)))
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
             .addComponent(jSeparator1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLBuscarCliente)
+                .addComponent(jLBorrarCliente)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLTelefonp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -151,19 +161,15 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
                     .addComponent(jLCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(jBSalir)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBSalir)
+                    .addComponent(jBBorrar))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    ///------------BOTON SALIR------------
-    private void jBSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirActionPerformed
-        this.dispose(); ///CERRAR VENTANA
-    }//GEN-LAST:event_jBSalirActionPerformed
-
-    ///------------BOTON BUSCAR------------
     private void jBBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBuscarActionPerformed
         boolean msj=false;
         try {
@@ -179,7 +185,17 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
             limpiar();  ///LIMPIAR
         }
     }//GEN-LAST:event_jBBuscarActionPerformed
-    
+
+    ///------------BOTON SALIR------------
+    private void jBSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirActionPerformed
+        this.dispose(); ///CERRAR VENTANA
+    }//GEN-LAST:event_jBSalirActionPerformed
+
+    ///------------BOTON BORRAR------------
+    private void jBBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBorrarActionPerformed
+        Escritorio.getDirectorio().borrarCliente(Long.parseLong(jTTelefono.getText()));
+    }//GEN-LAST:event_jBBorrarActionPerformed
+
     ///------------LIMPIAR DATOS------------
     private void limpiar(){
         jTDNI.setText(null);
@@ -197,10 +213,11 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jBBorrar;
     private javax.swing.JButton jBBuscar;
     private javax.swing.JButton jBSalir;
     private javax.swing.JLabel jLApellido;
-    private javax.swing.JLabel jLBuscarCliente;
+    private javax.swing.JLabel jLBorrarCliente;
     private javax.swing.JLabel jLCiudad;
     private javax.swing.JLabel jLDNI;
     private javax.swing.JLabel jLNombre;

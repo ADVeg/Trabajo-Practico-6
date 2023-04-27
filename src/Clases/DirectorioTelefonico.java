@@ -37,7 +37,7 @@ public class DirectorioTelefonico {
         
     }
 
-    public void borrarCliente() {
-        
+    public void borrarCliente(long telefono) {
+        clientes.remove(telefono);
     }
 }

@@ -45,7 +45,7 @@ public class Escritorio extends javax.swing.JFrame {
             .addGap(0, 437, Short.MAX_VALUE)
         );
 
-        jMCliente.setText("Cliente");
+        jMCliente.setText("Administrar Clientes");
 
         jMIAgregarCliente.setText("Agregar Cliente");
         jMIAgregarCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -64,6 +64,11 @@ public class Escritorio extends javax.swing.JFrame {
         jMCliente.add(jMIBuscarCliente);
 
         jMIBorrarCliente.setText("Borrar Cliente");
+        jMIBorrarCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMIBorrarClienteActionPerformed(evt);
+            }
+        });
         jMCliente.add(jMIBorrarCliente);
 
         jMenu.add(jMCliente);
@@ -120,6 +125,15 @@ public class Escritorio extends javax.swing.JFrame {
     private void jMISalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMISalirActionPerformed
         this.dispose(); ///CERRAR VENTANA
     }//GEN-LAST:event_jMISalirActionPerformed
+
+    ///------------ABRIR VENTANA BORRAR CLIENTE------------
+    private void jMIBorrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIBorrarClienteActionPerformed
+        jEscritorio.removeAll();
+        jEscritorio.repaint();
+        VistaBorrarCliente vBc=new VistaBorrarCliente();
+        vBc.setVisible(true);
+        jEscritorio.add(vBc);
+    }//GEN-LAST:event_jMIBorrarClienteActionPerformed
 
     /**
      * @param args the command line arguments
