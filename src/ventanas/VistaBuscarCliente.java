@@ -28,39 +28,39 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLBuscarCliente = new javax.swing.JLabel();
+        jLTelefonp = new javax.swing.JLabel();
         jTTelefono = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
+        jLDNI = new javax.swing.JLabel();
         jTDNI = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
+        jLApellido = new javax.swing.JLabel();
         jTApellido = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        jLNombre = new javax.swing.JLabel();
         jTNombre = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        jLCiudad = new javax.swing.JLabel();
         jTCiudad = new javax.swing.JTextField();
         jBBuscar = new javax.swing.JButton();
         jBSalir = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(489, 360));
 
-        jLabel1.setText("BUSCAR CLIENTE");
+        jLBuscarCliente.setText("BUSCAR CLIENTE");
 
-        jLabel2.setText("TELEFONO:");
+        jLTelefonp.setText("TELEFONO:");
 
-        jLabel3.setText("DNI:");
+        jLDNI.setText("DNI:");
 
         jTDNI.setEditable(false);
 
-        jLabel4.setText("APELLIDO:");
+        jLApellido.setText("APELLIDO:");
 
         jTApellido.setEditable(false);
 
-        jLabel5.setText("NOMBRE:");
+        jLNombre.setText("NOMBRE:");
 
         jTNombre.setEditable(false);
 
-        jLabel6.setText("CIUDAD:");
+        jLCiudad.setText("CIUDAD:");
 
         jTCiudad.setEditable(false);
 
@@ -87,28 +87,28 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(186, 186, 186)
-                        .addComponent(jLabel1))
+                        .addComponent(jLBuscarCliente))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabel6)
+                                .addComponent(jLCiudad)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jTCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabel5)
+                                .addComponent(jLNombre)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jTNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabel4)
+                                .addComponent(jLApellido)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jTApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabel3)
+                                .addComponent(jLDNI)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(jTDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabel2)
+                                .addComponent(jLTelefonp)
                                 .addGap(67, 67, 67)
                                 .addComponent(jTTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(26, 26, 26)
@@ -123,28 +123,28 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(jLBuscarCliente)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLTelefonp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jTTelefono)
                         .addComponent(jBBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTDNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jBSalir)
@@ -168,12 +168,22 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
                 mostrar();
             }else{  ///SI NO EXISTE EL TELEFONO MOSTRAR CARTEL
                 JOptionPane.showMessageDialog(this, "Telefono no encontrado");
+                limpiar();  ///LIMPIAR
             }
         } catch (Exception e) { ///DATOS INGRESADO TELEFONO INCORRECTO
             JOptionPane.showMessageDialog(this, "Dato Incorrecto");
+            limpiar();  ///LIMPIAR
         }
     }//GEN-LAST:event_jBBuscarActionPerformed
-
+    
+    ///------------LIMPIAR DATOS------------
+    private void limpiar(){
+        jTDNI.setText(null);
+        jTApellido.setText(null);
+        jTNombre.setText(null);
+        jTCiudad.setText(null);
+    }
+    
     ///------------MOSTRAR DATOS------------
     private void mostrar(){
         jTDNI.setText(""+Escritorio.getDirectorio().getClientes().get(Long.parseLong(jTTelefono.getText())).getDni());
@@ -185,12 +195,12 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBBuscar;
     private javax.swing.JButton jBSalir;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLApellido;
+    private javax.swing.JLabel jLBuscarCliente;
+    private javax.swing.JLabel jLCiudad;
+    private javax.swing.JLabel jLDNI;
+    private javax.swing.JLabel jLNombre;
+    private javax.swing.JLabel jLTelefonp;
     private javax.swing.JTextField jTApellido;
     private javax.swing.JTextField jTCiudad;
     private javax.swing.JTextField jTDNI;

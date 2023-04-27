@@ -6,6 +6,7 @@ public class Escritorio extends javax.swing.JFrame {
     private static DirectorioTelefonico directorio=new DirectorioTelefonico();
     
     public Escritorio() {
+        super("Directorio Telefonico"); ///TITULO VENTANA
         initComponents();
     }
 
@@ -70,6 +71,11 @@ public class Escritorio extends javax.swing.JFrame {
         jMSalir.setText("Salir");
 
         jMISalir.setText("Salir");
+        jMISalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMISalirActionPerformed(evt);
+            }
+        });
         jMSalir.add(jMISalir);
 
         jMenu.add(jMSalir);
@@ -109,6 +115,11 @@ public class Escritorio extends javax.swing.JFrame {
         vbc.setVisible(true);
         jEscritorio.add(vbc);
     }//GEN-LAST:event_jMIBuscarClienteActionPerformed
+
+    ///------------MENU ITEM SALIR------------
+    private void jMISalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMISalirActionPerformed
+        this.dispose(); ///CERRAR VENTANA
+    }//GEN-LAST:event_jMISalirActionPerformed
 
     /**
      * @param args the command line arguments
