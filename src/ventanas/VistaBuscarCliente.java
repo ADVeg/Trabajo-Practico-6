@@ -4,7 +4,6 @@
  */
 package ventanas;
 
-import Clases.DirectorioTelefonico;
 import javax.swing.JOptionPane;
 
 /**
@@ -155,24 +154,27 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    ///------------BOTON SALIR------------
     private void jBSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirActionPerformed
-        this.dispose();
+        this.dispose(); ///CERRAR VENTANA
     }//GEN-LAST:event_jBSalirActionPerformed
 
+    ///------------BOTON BUSCAR------------
     private void jBBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBuscarActionPerformed
         boolean msj=false;
         try {
             msj=Escritorio.getDirectorio().buscarCliente(Long.parseLong(jTTelefono.getText()));
-            if (msj) {
+            if (msj) {  ///SI EXISTE EL TELEFONO MOSTRAR DATOS
                 mostrar();
-            }else{
+            }else{  ///SI NO EXISTE EL TELEFONO MOSTRAR CARTEL
                 JOptionPane.showMessageDialog(this, "Telefono no encontrado");
             }
-        } catch (Exception e) {
+        } catch (Exception e) { ///DATOS INGRESADO TELEFONO INCORRECTO
             JOptionPane.showMessageDialog(this, "Dato Incorrecto");
         }
     }//GEN-LAST:event_jBBuscarActionPerformed
-    
+
+    ///------------MOSTRAR DATOS------------
     private void mostrar(){
         jTDNI.setText(""+Escritorio.getDirectorio().getClientes().get(Long.parseLong(jTTelefono.getText())).getDni());
         jTApellido.setText(Escritorio.getDirectorio().getClientes().get(Long.parseLong(jTTelefono.getText())).getApellido());

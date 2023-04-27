@@ -147,29 +147,33 @@ public class VistaAgregarCliente extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    ///------------BOTON GUARDAR CLIENTE------------
     private void jBGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarActionPerformed
         boolean msj=false;
         try {
             msj=Escritorio.getDirectorio().agregarCliente(new Cliente(Integer.parseInt(jTDNI.getText()),jTNombre.getText(),jTApellido.getText(),jTCiudad.getText(),jTDireccion.getText(),Long.parseLong(jTTelefono.getText())));
-            if (msj) {
+            if (msj) {  ///SI EL CLIENTE NO ESTA REPETIDO SE GUARDA
                 JOptionPane.showMessageDialog(this,"Datos guardados");
-            }else{
+            }else{  ///SI EL CLIENTE ESTA REPETIDO NO SE GUARDA
                 JOptionPane.showMessageDialog(this,"Cliente ya cargado");
             }
-        } catch (Exception e) {
+        } catch (Exception e) { ///DATOS CARGADOS EN VENTANA INCORRECTOS
             JOptionPane.showMessageDialog(this,"Datos incorrectos");
         }
-        limpiar();
+        limpiar();  ///LIMPIAR DATOS DESPUES DE PRESIONAR BOTON GUARDAR
     }//GEN-LAST:event_jBGuardarActionPerformed
 
+    ///------------BOTON NUEVO PARA LIMPIAR------------
     private void jBNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoActionPerformed
-        limpiar();
+        limpiar();  ///LIMPIAR DATOS
     }//GEN-LAST:event_jBNuevoActionPerformed
 
+    ///------------BOTON SALIR------------
     private void jBSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirActionPerformed
-        this.dispose();
+        this.dispose(); ///CERRAR VENTANA
     }//GEN-LAST:event_jBSalirActionPerformed
 
+    ///------------LIMPIAR DATOS------------
     private void limpiar(){
         jTDNI.setText(null);
         jTApellido.setText(null);

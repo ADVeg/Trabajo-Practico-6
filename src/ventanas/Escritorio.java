@@ -90,14 +90,18 @@ public class Escritorio extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    ///------------ABRIR VENTANA AGREGAR CLIENTE------------
     private void jMIAgregarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIAgregarClienteActionPerformed
-        jEscritorio.removeAll();
-        jEscritorio.repaint();
-        VistaAgregarCliente vap=new VistaAgregarCliente();
-        vap.setVisible(true);
-        jEscritorio.add(vap);
+        ///------------ESTOS COMENTARIOS SON PARA ENTENDER NOSE SI SERIAN LOS CORRECTOS------------
+        jEscritorio.removeAll();///CIERRA VENTANAS
+        jEscritorio.repaint();///PINTA FONDO
+        VistaAgregarCliente vap=new VistaAgregarCliente();///CREAR VENTANA
+        vap.setVisible(true);///VENTANA VISIBLE
+        jEscritorio.add(vap);///MOSTRAR VENTANA
     }//GEN-LAST:event_jMIAgregarClienteActionPerformed
 
+    
+    ///------------ABRIR VENTANA BUSCAR CLIENTE------------
     private void jMIBuscarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIBuscarClienteActionPerformed
         jEscritorio.removeAll();
         jEscritorio.repaint();
