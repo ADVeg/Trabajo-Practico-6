@@ -48,6 +48,24 @@ public class VistaAgregarCliente extends javax.swing.JInternalFrame {
 
         jLTelefono.setText("TELEFONO:");
 
+        jTApellido.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTApellidoKeyTyped(evt);
+            }
+        });
+
+        jTNombre.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTNombreKeyTyped(evt);
+            }
+        });
+
+        jTCiudad.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTCiudadKeyTyped(evt);
+            }
+        });
+
         jBGuardar.setText("GUARDAR");
         jBGuardar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,6 +88,18 @@ public class VistaAgregarCliente extends javax.swing.JInternalFrame {
         });
 
         jLDireccion.setText("DIRECCION:");
+
+        jTDNI.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTDNIKeyTyped(evt);
+            }
+        });
+
+        jTTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTTelefonoKeyTyped(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -150,19 +180,46 @@ public class VistaAgregarCliente extends javax.swing.JInternalFrame {
     ///------------BOTON GUARDAR CLIENTE------------
     private void jBGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBGuardarActionPerformed
         boolean msj=false;
-        try {
+        if(!msj){msj=verificarCamposnum(jTDNI);}
+        if(!msj){msj=verificarCampos(jTApellido);}
+        if(!msj){msj=verificarCampos(jTNombre);}
+        if(!msj){msj=verificarCampos(jTCiudad);}
+        if(!msj){msj=verificarCampos(jTDireccion);}
+        if(!msj){msj=verificarCamposnum(jTTelefono);}
+        if(!msj){
             msj=Escritorio.getDirectorio().agregarCliente(new Cliente(Integer.parseInt(jTDNI.getText()),jTNombre.getText(),jTApellido.getText(),jTCiudad.getText(),jTDireccion.getText(),Long.parseLong(jTTelefono.getText())));
             if (msj) {  ///SI EL CLIENTE NO ESTA REPETIDO SE GUARDA
                 JOptionPane.showMessageDialog(this,"Datos guardados");
+                limpiar();  ///LIMPIAR SI GUARDA
             }else{  ///SI EL CLIENTE ESTA REPETIDO NO SE GUARDA
-                JOptionPane.showMessageDialog(this,"Cliente ya cargado");
+                JOptionPane.showMessageDialog(this,"Telefono ya cargado");
             }
-        } catch (Exception e) { ///DATOS CARGADOS EN VENTANA INCORRECTOS
-            JOptionPane.showMessageDialog(this,"Datos incorrectos");
         }
-        limpiar();  ///LIMPIAR DATOS DESPUES DE PRESIONAR BOTON GUARDAR
     }//GEN-LAST:event_jBGuardarActionPerformed
 
+    ///------------VERIFICAR CAMPOS PARA CARGAR UN CLIENTE COMPLETO------------
+    private boolean verificarCampos(javax.swing.JTextField tx){
+        if(tx.getText().isBlank()){
+            JOptionPane.showMessageDialog(this,"Completar Campo");
+            tx.requestFocus();
+            return true;
+        }
+        return false;
+    }
+    
+    private boolean verificarCamposnum(javax.swing.JTextField tx){
+        if(tx.getText().isBlank()||Long.parseLong(tx.getText())<0){   ///VERIFICAR CAMPO VACIO O SI EL NUMERO INGRESADO ES NEGATIVO
+            if(tx.getText().isBlank()){
+                JOptionPane.showMessageDialog(this,"Completar Campo");
+            }else{
+                JOptionPane.showMessageDialog(this, "No ingresar numeros negativos");
+            }
+            tx.requestFocus();
+            return true;
+        }
+        return false;
+    }
+    
     ///------------BOTON NUEVO PARA LIMPIAR------------
     private void jBNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBNuevoActionPerformed
         limpiar();  ///LIMPIAR DATOS
@@ -172,7 +229,45 @@ public class VistaAgregarCliente extends javax.swing.JInternalFrame {
     private void jBSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSalirActionPerformed
         this.dispose(); ///CERRAR VENTANA
     }//GEN-LAST:event_jBSalirActionPerformed
+    
+    ///------------VERIFICAR NUMEROS------------
+    private void jTDNIKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTDNIKeyTyped
+        verificarNum(evt,jTDNI);    ///VERIFICAR DNI
+    }//GEN-LAST:event_jTDNIKeyTyped
 
+    private void jTTelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTTelefonoKeyTyped
+        verificarNum(evt,jTTelefono);   ///VERIFICAR TELEFONO
+    }//GEN-LAST:event_jTTelefonoKeyTyped
+    ///------------VERIFICADOR SOLO NUMEROS------------
+    private void verificarNum(java.awt.event.KeyEvent evt,javax.swing.JTextField tx){
+        if(Character.isLetter(evt.getKeyChar())||Character.toString(evt.getKeyChar()).matches(" ")){
+            JOptionPane.showMessageDialog(this, "No se permiten letras en este campo","Advertencia",JOptionPane.WARNING_MESSAGE);
+            evt.consume();
+            tx.requestFocus();
+        }
+    }
+    
+    ///------------VERIFICAR TEXTO------------
+    private void jTApellidoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTApellidoKeyTyped
+        verificarChar(evt,jTApellido);  ///VERIFICAR APELLIDO
+    }//GEN-LAST:event_jTApellidoKeyTyped
+
+    private void jTNombreKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTNombreKeyTyped
+        verificarChar(evt, jTNombre);   ///VERIFICAR NOMBRE
+    }//GEN-LAST:event_jTNombreKeyTyped
+
+    private void jTCiudadKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTCiudadKeyTyped
+        verificarChar(evt,jTCiudad);    ///VERIFICAR CIUDAD
+    }//GEN-LAST:event_jTCiudadKeyTyped
+    ///------------VERIFICADOR SOLO TEXTO------------
+    private void verificarChar(java.awt.event.KeyEvent evt,javax.swing.JTextField tx){
+        if(Character.isDigit(evt.getKeyChar())){
+            JOptionPane.showMessageDialog(this, "No se permiten numeros en este campo","Advertencia",JOptionPane.WARNING_MESSAGE);
+            evt.consume();
+            tx.requestFocus();
+        }
+    }
+    
     ///------------LIMPIAR DATOS------------
     private void limpiar(){
         jTDNI.setText(null);

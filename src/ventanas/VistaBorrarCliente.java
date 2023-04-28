@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
- */
 package ventanas;
 
 import javax.swing.JOptionPane;
@@ -74,6 +70,12 @@ public class VistaBorrarCliente extends javax.swing.JInternalFrame {
         jBSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jBSalirActionPerformed(evt);
+            }
+        });
+
+        jTTelefono.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTTelefonoKeyTyped(evt);
             }
         });
 
@@ -170,9 +172,20 @@ public class VistaBorrarCliente extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    ///------------BOTON BUSCAR------------
     private void jBBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBuscarActionPerformed
         boolean msj=false;
-        try {
+        if(jTTelefono.getText().isBlank()||Long.parseLong(jTTelefono.getText())<0){   ///VERIFICAR CAMPO VACIO O SI EL NUMERO INGRESADO ES NEGATIVO
+            if(jTTelefono.getText().isBlank()){
+                JOptionPane.showMessageDialog(this,"Completar Campo");
+                limpiar();
+            }else{
+                JOptionPane.showMessageDialog(this, "No ingresar numeros negativos");
+            }
+            jTTelefono.requestFocus();
+            msj=true;
+        }
+        if(!msj){
             msj=Escritorio.getDirectorio().buscarCliente(Long.parseLong(jTTelefono.getText()));
             if (msj) {  ///SI EXISTE EL TELEFONO MOSTRAR DATOS
                 mostrar();
@@ -180,9 +193,6 @@ public class VistaBorrarCliente extends javax.swing.JInternalFrame {
                 JOptionPane.showMessageDialog(this, "Telefono no encontrado");
                 limpiar();  ///LIMPIAR
             }
-        } catch (Exception e) { ///DATOS INGRESADO TELEFONO INCORRECTO
-            JOptionPane.showMessageDialog(this, "Dato Incorrecto");
-            limpiar();  ///LIMPIAR
         }
     }//GEN-LAST:event_jBBuscarActionPerformed
 
@@ -193,8 +203,27 @@ public class VistaBorrarCliente extends javax.swing.JInternalFrame {
 
     ///------------BOTON BORRAR------------
     private void jBBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBorrarActionPerformed
-        Escritorio.getDirectorio().borrarCliente(Long.parseLong(jTTelefono.getText()));
+        if(jTTelefono.getText().isBlank()){   ///VERIFICAR CAMPO VACIO
+            JOptionPane.showMessageDialog(this,"Completar Campo");
+            jTTelefono.requestFocus();
+        }else{
+            if(Escritorio.getDirectorio().borrarCliente(Long.parseLong(jTTelefono.getText()))){
+                JOptionPane.showMessageDialog(this, "Cliente borrado");
+                limpiar();
+            }else{
+                JOptionPane.showMessageDialog(this, "Cliente no valido");
+            }
+        }
     }//GEN-LAST:event_jBBorrarActionPerformed
+
+    ///------------VERIFICAR INGRESO DE NUMEROS------------
+    private void jTTelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTTelefonoKeyTyped
+        if(Character.isLetter(evt.getKeyChar())||Character.toString(evt.getKeyChar()).matches(" ")){
+            JOptionPane.showMessageDialog(this, "No se permiten letras en este campo","Advertencia",JOptionPane.WARNING_MESSAGE);
+            evt.consume();
+            jTTelefono.requestFocus();
+        }
+    }//GEN-LAST:event_jTTelefonoKeyTyped
 
     ///------------LIMPIAR DATOS------------
     private void limpiar(){

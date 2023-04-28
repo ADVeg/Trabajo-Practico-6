@@ -25,9 +25,8 @@ public class DirectorioTelefonico {
     public boolean buscarCliente(long telefono) {
         if (clientes.containsKey(telefono)) {
             return true;
-        }else{
-            return false;
         }
+        return false;
     }
 
     public void buscarTelefono() {
@@ -37,7 +36,11 @@ public class DirectorioTelefonico {
         
     }
 
-    public void borrarCliente(long telefono) {
-        clientes.remove(telefono);
+    public boolean borrarCliente(long telefono) {
+        if(clientes.containsKey(telefono)){
+            clientes.remove(telefono);
+            return true;
+        }
+        return false;
     }
 }
