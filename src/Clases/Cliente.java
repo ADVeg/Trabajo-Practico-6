@@ -1,5 +1,9 @@
 package Clases;
 
+/**
+ *
+ * @author Usuario
+ */
 public class Cliente {
     private int dni;
     private String nombre;

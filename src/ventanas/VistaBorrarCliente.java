@@ -12,6 +12,7 @@ public class VistaBorrarCliente extends javax.swing.JInternalFrame {
      * Creates new form VistaBorrarCliente
      */
     public VistaBorrarCliente() {
+        super("BORRAR CLIENTE");
         initComponents();
     }
 
@@ -30,7 +31,6 @@ public class VistaBorrarCliente extends javax.swing.JInternalFrame {
         jTNombre = new javax.swing.JTextField();
         jLCiudad = new javax.swing.JLabel();
         jTCiudad = new javax.swing.JTextField();
-        jLBorrarCliente = new javax.swing.JLabel();
         jBBuscar = new javax.swing.JButton();
         jLTelefonp = new javax.swing.JLabel();
         jBSalir = new javax.swing.JButton();
@@ -39,8 +39,6 @@ public class VistaBorrarCliente extends javax.swing.JInternalFrame {
         jLDNI = new javax.swing.JLabel();
         jTDNI = new javax.swing.JTextField();
         jBBorrar = new javax.swing.JButton();
-
-        setPreferredSize(new java.awt.Dimension(489, 360));
 
         jLApellido.setText("APELLIDO:");
 
@@ -53,8 +51,6 @@ public class VistaBorrarCliente extends javax.swing.JInternalFrame {
         jLCiudad.setText("CIUDAD:");
 
         jTCiudad.setEditable(false);
-
-        jLBorrarCliente.setText("BORRAR CLIENTE");
 
         jBBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/BUSCAR.png"))); // NOI18N
         jBBuscar.setToolTipText("Buscar");
@@ -94,59 +90,56 @@ public class VistaBorrarCliente extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jBBorrar)
-                .addGap(124, 124, 124)
-                .addComponent(jBSalir)
-                .addGap(36, 36, 36))
+            .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(186, 186, 186)
-                        .addComponent(jLBorrarCliente))
+                        .addGap(252, 252, 252)
+                        .addComponent(jBBorrar)
+                        .addGap(52, 52, 52)
+                        .addComponent(jBSalir))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLCiudad)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
                                 .addComponent(jTCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLNombre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLApellido)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLDNI)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLTelefonp)
-                                .addGap(67, 67, 67)
-                                .addComponent(jTTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(26, 26, 26)
-                        .addComponent(jBBuscar)))
-                .addContainerGap(34, Short.MAX_VALUE))
-            .addComponent(jSeparator1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(jTNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLTelefonp)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(44, 44, 44)
+                        .addComponent(jBBuscar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLApellido)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jLDNI)
+                        .addGap(43, 43, 43)
+                        .addComponent(jTDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLBorrarCliente)
-                .addGap(18, 18, 18)
+                .addGap(12, 12, 12)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLTelefonp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTTelefono)
-                        .addComponent(jBBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(4, 4, 4)
+                        .addComponent(jLTelefonp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(4, 4, 4)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTDNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -166,7 +159,7 @@ public class VistaBorrarCliente extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBSalir)
                     .addComponent(jBBorrar))
-                .addContainerGap(24, Short.MAX_VALUE))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
 
         pack();
@@ -175,23 +168,27 @@ public class VistaBorrarCliente extends javax.swing.JInternalFrame {
     ///------------BOTON BUSCAR------------
     private void jBBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBuscarActionPerformed
         boolean msj=false;
-        if(jTTelefono.getText().isBlank()||Long.parseLong(jTTelefono.getText())<0){   ///VERIFICAR CAMPO VACIO O SI EL NUMERO INGRESADO ES NEGATIVO
-            if(jTTelefono.getText().isBlank()){
-                JOptionPane.showMessageDialog(this,"Completar Campo");
-                limpiar();
-            }else{
-                JOptionPane.showMessageDialog(this, "No ingresar numeros negativos");
+        if(Escritorio.getDirectorio().getClientes().size()==0){
+            JOptionPane.showMessageDialog(null, "No cargo ningun cliente");
+        }else{
+            if(jTTelefono.getText().isBlank()||Long.parseLong(jTTelefono.getText())<0){   ///VERIFICAR CAMPO VACIO O SI EL NUMERO INGRESADO ES NEGATIVO
+                if(jTTelefono.getText().isBlank()){
+                    JOptionPane.showMessageDialog(this,"Completar Campo");
+                    limpiar();
+                }else{
+                    JOptionPane.showMessageDialog(this, "No ingresar numeros negativos");
+                }
+                jTTelefono.requestFocus();
+                msj=true;
             }
-            jTTelefono.requestFocus();
-            msj=true;
-        }
-        if(!msj){
-            msj=Escritorio.getDirectorio().buscarCliente(Long.parseLong(jTTelefono.getText()));
-            if (msj) {  ///SI EXISTE EL TELEFONO MOSTRAR DATOS
-                mostrar();
-            }else{  ///SI NO EXISTE EL TELEFONO MOSTRAR CARTEL
-                JOptionPane.showMessageDialog(this, "Telefono no encontrado");
-                limpiar();  ///LIMPIAR
+            if(!msj){
+                msj=Escritorio.getDirectorio().buscarCliente(Long.parseLong(jTTelefono.getText()));
+                if (msj) {  ///SI EXISTE EL TELEFONO MOSTRAR DATOS
+                    mostrar();
+                }else{  ///SI NO EXISTE EL TELEFONO MOSTRAR CARTEL
+                    JOptionPane.showMessageDialog(this, "Telefono no encontrado");
+                    limpiar();  ///LIMPIAR
+                }
             }
         }
     }//GEN-LAST:event_jBBuscarActionPerformed
@@ -246,7 +243,6 @@ public class VistaBorrarCliente extends javax.swing.JInternalFrame {
     private javax.swing.JButton jBBuscar;
     private javax.swing.JButton jBSalir;
     private javax.swing.JLabel jLApellido;
-    private javax.swing.JLabel jLBorrarCliente;
     private javax.swing.JLabel jLCiudad;
     private javax.swing.JLabel jLDNI;
     private javax.swing.JLabel jLNombre;

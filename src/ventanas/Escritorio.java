@@ -2,6 +2,10 @@ package ventanas;
 
 import Clases.DirectorioTelefonico;
 
+/**
+ *
+ * @author Usuario
+ */
 public class Escritorio extends javax.swing.JFrame {
     private static DirectorioTelefonico directorio=new DirectorioTelefonico();
     
@@ -29,6 +33,8 @@ public class Escritorio extends javax.swing.JFrame {
         jMIAgregarCliente = new javax.swing.JMenuItem();
         jMIBuscarCliente = new javax.swing.JMenuItem();
         jMIBorrarCliente = new javax.swing.JMenuItem();
+        jMIBuscarApellido = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMSalir = new javax.swing.JMenu();
         jMISalir = new javax.swing.JMenuItem();
 
@@ -57,7 +63,7 @@ public class Escritorio extends javax.swing.JFrame {
         });
         jMCliente.add(jMIAgregarCliente);
 
-        jMIBuscarCliente.setText("Buscar Cliente");
+        jMIBuscarCliente.setText("Buscar Telefono");
         jMIBuscarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMIBuscarClienteActionPerformed(evt);
@@ -72,6 +78,22 @@ public class Escritorio extends javax.swing.JFrame {
             }
         });
         jMCliente.add(jMIBorrarCliente);
+
+        jMIBuscarApellido.setText("Buscar Apellido");
+        jMIBuscarApellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMIBuscarApellidoActionPerformed(evt);
+            }
+        });
+        jMCliente.add(jMIBuscarApellido);
+
+        jMenuItem1.setText("Buscar Ciudad");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMCliente.add(jMenuItem1);
 
         jMenu.add(jMCliente);
 
@@ -137,6 +159,22 @@ public class Escritorio extends javax.swing.JFrame {
         jEscritorio.add(vBc);
     }//GEN-LAST:event_jMIBorrarClienteActionPerformed
 
+    private void jMIBuscarApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMIBuscarApellidoActionPerformed
+        jEscritorio.removeAll();
+        jEscritorio.repaint();
+        VistaBuscarApellidos vBa=new VistaBuscarApellidos();
+        vBa.setVisible(true);
+        jEscritorio.add(vBa);
+    }//GEN-LAST:event_jMIBuscarApellidoActionPerformed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        jEscritorio.removeAll();
+        jEscritorio.repaint();
+        VistaBuscarCiudad vBc=new VistaBuscarCiudad();
+        vBc.setVisible(true);
+        jEscritorio.add(vBc);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -180,9 +218,11 @@ public class Escritorio extends javax.swing.JFrame {
     private javax.swing.JMenu jMCliente;
     private javax.swing.JMenuItem jMIAgregarCliente;
     private javax.swing.JMenuItem jMIBorrarCliente;
+    private javax.swing.JMenuItem jMIBuscarApellido;
     private javax.swing.JMenuItem jMIBuscarCliente;
     private javax.swing.JMenuItem jMISalir;
     private javax.swing.JMenu jMSalir;
     private javax.swing.JMenuBar jMenu;
+    private javax.swing.JMenuItem jMenuItem1;
     // End of variables declaration//GEN-END:variables
 }

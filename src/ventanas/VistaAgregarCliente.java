@@ -3,10 +3,15 @@ package ventanas;
 import Clases.Cliente;
 import javax.swing.JOptionPane;
 
+/**
+ *
+ * @author Usuario
+ */
 public class VistaAgregarCliente extends javax.swing.JInternalFrame {
     
     
     public VistaAgregarCliente() {
+        super("AGREGAR CLIENTE");
         initComponents();
     }
 
@@ -19,7 +24,6 @@ public class VistaAgregarCliente extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLFormularioDeCliente = new javax.swing.JLabel();
         jLDNI = new javax.swing.JLabel();
         jLApellido = new javax.swing.JLabel();
         jLNombre = new javax.swing.JLabel();
@@ -35,8 +39,6 @@ public class VistaAgregarCliente extends javax.swing.JInternalFrame {
         jTDireccion = new javax.swing.JTextField();
         jTDNI = new javax.swing.JTextField();
         jTTelefono = new javax.swing.JTextField();
-
-        jLFormularioDeCliente.setText("FORMULARIO DE CLIENTES");
 
         jLDNI.setText("DNI:");
 
@@ -105,10 +107,6 @@ public class VistaAgregarCliente extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLFormularioDeCliente)
-                .addGap(165, 165, 165))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -121,13 +119,6 @@ public class VistaAgregarCliente extends javax.swing.JInternalFrame {
                 .addGap(66, 66, 66)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jBGuardar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
-                        .addComponent(jBNuevo)
-                        .addGap(75, 75, 75)
-                        .addComponent(jBSalir)
-                        .addGap(30, 30, 30))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jTDireccion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 226, Short.MAX_VALUE)
                             .addComponent(jTApellido)
@@ -135,13 +126,19 @@ public class VistaAgregarCliente extends javax.swing.JInternalFrame {
                             .addComponent(jTCiudad)
                             .addComponent(jTDNI)
                             .addComponent(jTTelefono))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jBGuardar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                        .addComponent(jBNuevo)
+                        .addGap(31, 31, 31)
+                        .addComponent(jBSalir)
+                        .addGap(15, 15, 15))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLFormularioDeCliente)
-                .addGap(18, 18, 18)
+                .addGap(16, 16, 16)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTDNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -165,12 +162,11 @@ public class VistaAgregarCliente extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jBGuardar)
-                        .addComponent(jBSalir))
-                    .addComponent(jBNuevo))
+                .addGap(36, 36, 36)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBNuevo)
+                    .addComponent(jBGuardar)
+                    .addComponent(jBSalir))
                 .addGap(24, 24, 24))
         );
 
@@ -286,7 +282,6 @@ public class VistaAgregarCliente extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLCiudad;
     private javax.swing.JLabel jLDNI;
     private javax.swing.JLabel jLDireccion;
-    private javax.swing.JLabel jLFormularioDeCliente;
     private javax.swing.JLabel jLNombre;
     private javax.swing.JLabel jLTelefono;
     private javax.swing.JTextField jTApellido;

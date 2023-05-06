@@ -3,6 +3,10 @@ package Clases;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ *
+ * @author Usuario
+ */
 public class DirectorioTelefonico {
     Map<Long,Cliente> clientes=new HashMap();
 
@@ -29,11 +33,24 @@ public class DirectorioTelefonico {
         return false;
     }
 
-    public void buscarTelefono() {
+    public Map<Long,Cliente> buscarTelefono(String apellido) {
+        Map<Long,Cliente> encontrados=new HashMap();
+        for(Map.Entry<Long,Cliente> cliente:clientes.entrySet()){
+            if(cliente.getValue().getApellido().equalsIgnoreCase(apellido)){
+                encontrados.put(cliente.getKey(), cliente.getValue());
+            }
+        }
+        return encontrados;
     }
 
-    public void buscarClientes() {
-        
+    public Map<Long,Cliente> buscarClientes(String ciudad) {
+        Map<Long,Cliente> encontrados=new HashMap();
+        for(Map.Entry<Long,Cliente> cliente:clientes.entrySet()){
+            if(cliente.getValue().getCiudad().equalsIgnoreCase(ciudad)){
+                encontrados.put(cliente.getKey(), cliente.getValue());
+            }
+        }
+        return encontrados;
     }
 
     public boolean borrarCliente(long telefono) {

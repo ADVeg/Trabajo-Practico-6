@@ -5,6 +5,7 @@ import javax.swing.JOptionPane;
 public class VistaBuscarCliente extends javax.swing.JInternalFrame {
 
     public VistaBuscarCliente() {
+        super("BUSCAR CLIENTE");
         initComponents();
     }
 
@@ -17,7 +18,6 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLBuscarCliente = new javax.swing.JLabel();
         jLTelefonp = new javax.swing.JLabel();
         jTTelefono = new javax.swing.JTextField();
         jLDNI = new javax.swing.JLabel();
@@ -31,10 +31,6 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
         jBBuscar = new javax.swing.JButton();
         jBSalir = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
-
-        setPreferredSize(new java.awt.Dimension(489, 360));
-
-        jLBuscarCliente.setText("BUSCAR CLIENTE");
 
         jLTelefonp.setText("TELEFONO:");
 
@@ -79,55 +75,49 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jSeparator1)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLTelefonp)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(37, 37, 37)
+                        .addComponent(jBBuscar))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(jLCiudad)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(jLNombre)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(jLApellido)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                            .addComponent(jLDNI)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jTDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(18, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jBSalir)
-                .addGap(36, 36, 36))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(186, 186, 186)
-                        .addComponent(jLBuscarCliente))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLCiudad)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLNombre)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLApellido)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLDNI)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTDNI, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLTelefonp)
-                                .addGap(67, 67, 67)
-                                .addComponent(jTTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(26, 26, 26)
-                        .addComponent(jBBuscar)))
-                .addContainerGap(54, Short.MAX_VALUE))
-            .addComponent(jSeparator1)
+                .addGap(15, 15, 15))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLBuscarCliente)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLTelefonp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTTelefono)
-                        .addComponent(jBBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(4, 4, 4)
+                        .addComponent(jLTelefonp, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jBBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(4, 4, 4)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -147,7 +137,7 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
                     .addComponent(jTCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jBSalir)
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(23, Short.MAX_VALUE))
         );
 
         pack();
@@ -161,25 +151,30 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
     ///------------BOTON BUSCAR------------
     private void jBBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBBuscarActionPerformed
         boolean msj=false;
-        if(jTTelefono.getText().isBlank()||Long.parseLong(jTTelefono.getText())<0){   ///VERIFICAR CAMPO VACIO O SI EL NUMERO INGRESADO ES NEGATIVO
-            if(jTTelefono.getText().isBlank()){
-                JOptionPane.showMessageDialog(this,"Completar Campo");
-                limpiar();
-            }else{
-                JOptionPane.showMessageDialog(this, "No ingresar numeros negativos");
+        if(Escritorio.getDirectorio().getClientes().size()==0){
+            JOptionPane.showMessageDialog(null, "No cargo ningun cliente");
+        }else{
+            if(jTTelefono.getText().isBlank()||Long.parseLong(jTTelefono.getText())<0){   ///VERIFICAR CAMPO VACIO O SI EL NUMERO INGRESADO ES NEGATIVO
+                if(jTTelefono.getText().isBlank()){
+                    JOptionPane.showMessageDialog(this,"Completar Campo");
+                    limpiar();
+                }else{
+                    JOptionPane.showMessageDialog(this, "No ingresar numeros negativos");
+                }
+                jTTelefono.requestFocus();
+                msj=true;
             }
-            jTTelefono.requestFocus();
-            msj=true;
-        }
-        if(!msj){
-            msj=Escritorio.getDirectorio().buscarCliente(Long.parseLong(jTTelefono.getText()));
-            if (msj) {  ///SI EXISTE EL TELEFONO MOSTRAR DATOS
-                mostrar();
-            }else{  ///SI NO EXISTE EL TELEFONO MOSTRAR CARTEL
-                JOptionPane.showMessageDialog(this, "Telefono no encontrado");
-                limpiar();  ///LIMPIAR
+            if(!msj){
+                msj=Escritorio.getDirectorio().buscarCliente(Long.parseLong(jTTelefono.getText()));
+                if (msj) {  ///SI EXISTE EL TELEFONO MOSTRAR DATOS
+                    mostrar();
+                }else{  ///SI NO EXISTE EL TELEFONO MOSTRAR CARTEL
+                    JOptionPane.showMessageDialog(this, "Telefono no encontrado");
+                    limpiar();  ///LIMPIAR
+                }
             }
         }
+        
     }//GEN-LAST:event_jBBuscarActionPerformed
 
     private void jTTelefonoKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTTelefonoKeyTyped
@@ -210,7 +205,6 @@ public class VistaBuscarCliente extends javax.swing.JInternalFrame {
     private javax.swing.JButton jBBuscar;
     private javax.swing.JButton jBSalir;
     private javax.swing.JLabel jLApellido;
-    private javax.swing.JLabel jLBuscarCliente;
     private javax.swing.JLabel jLCiudad;
     private javax.swing.JLabel jLDNI;
     private javax.swing.JLabel jLNombre;
